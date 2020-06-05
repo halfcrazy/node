@@ -38,7 +38,7 @@ $(LOCAL_BUILD_DEP):
 		-replace=github.com/kelseyhightower/confd=../confd
 endif
 
-EXTRA_DOCKER_ARGS+=-e GOPRIVATE='github.com/tigera/*'
+EXTRA_DOCKER_ARGS+=-e GOPRIVATE='github.com/tigera/*' -e GOPROXY='https://goproxy.cn'
 
 include Makefile.common
 
